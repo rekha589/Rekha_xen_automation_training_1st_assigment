@@ -8,12 +8,12 @@ describe('Assignment 2nd', () => {
     })
 
     it('Validate list of tabs shown on the left bar', () => {
-        cy.wait(30000)
+        
         let mainmenutabs = ["Home", "Balance", "Transactions", "Reporting", "Accept Payments", "Payment Links", "QR Codes", "Send Payments", "Customers"]
         for (let index = 0; index < mainmenutabs.length; index++) {
             switch (mainmenutabs[index]) {
                 case "Home":
-                    cy.get('#lhs-home').should('be.visible').and('have.text', 'Home')
+                    cy.get('#lhs-home', {timeout: 30000}).should('be.visible').and('have.text', 'Home')
 
                     break;
                 case "Balance":
