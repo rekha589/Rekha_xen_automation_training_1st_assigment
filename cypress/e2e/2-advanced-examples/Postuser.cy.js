@@ -23,7 +23,7 @@ describe('Assignment 2nd', () => {
                 },
         
             body: {
-                "reference_id": "Testdemo34",
+                "reference_id": "Testdemo36",
                 "type": "INDIVIDUAL",
                 "individual_detail": {
                   "given_names": "Tester 10",
@@ -38,7 +38,7 @@ describe('Assignment 2nd', () => {
        
         return cy.request(req).then((response) => {
             expect(response.status).to.eq(200)
-            expect(response.body.reference_id).to.eq("Testdemo34")
+            expect(response.body.reference_id).to.eq("Testdemo36")
             expect(response.body.type).to.eq("INDIVIDUAL")
             expect(response.body.individual_detail.given_names).to.eq("Tester 10")
             expect(response.body.individual_detail.surname).to.eq("Test10")
